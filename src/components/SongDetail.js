@@ -5,7 +5,7 @@ const SongDetail = (props) => {
 
   return (
     <div>
-    <h2>Title:{props["song"]["feed"]["entry"]["im:name"]["label"]}</h2>
+    <h2>Title:{props["feed"]["entry"]["im:name"]["label"]}</h2>
     <h3>Artist:</h3>
     <h3>Chart Position:</h3>
 

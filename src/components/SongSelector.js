@@ -1,9 +1,10 @@
 import React from 'react';
+import SongDetail from './SongDetail';
 
 const SongSelector = (props) => {
   const options = props.songs.map((song, index) => {
-    return <option value ={index+1} key={index}>
-    {song["feed"]["entry"]["im:name"]["label"]}</option>
+    return <option value ={index} key={index}>
+    {song["im:name"]["label"]}</option>
   })
 
   function handleChange(event){

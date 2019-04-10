@@ -18,8 +18,10 @@ componentDidMount(){
   const url = 'https://itunes.apple.com/gb/rss/topsongs/limit=20/json';
   fetch(url)
   .then(res => res.json())
-  .then(data => this.setState({songs: data}))
+  .then(data => this.setState({songs: data.feed.entry}))
 }
+
+
 
 handleSongSelected(index){
   const selectedSong = this.state.songs[index];
@@ -36,13 +38,11 @@ render(){
 handleSelected={this.handleSongSelected}/>
 
 <SongDetail song={this.state.selectedSong}/>
-<SongDetail song={this.state.selectedSong}/>
-<SongDetail song={this.state.selectedSong}/>
+
 </div>
 
 );
 }
-
 
 }
 export default Top20;
